@@ -11,7 +11,7 @@ import {
 	ServerSideError,
 	SessionExpiredError,
 	SuspendedIPError,
-} from "~p0/models/errors";
+} from "~p0/models/error";
 
 export class ResponseFN {
 	public constructor(

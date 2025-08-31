@@ -1,4 +1,4 @@
-import { Evaluation, Skill } from "~p0/models/evaluations";
+import { Evaluation, Skill } from "~p0/models/evaluation";
 import { decodeSubject } from "./subject";
 import { decodePronoteDate } from "./time";
 

@@ -1,6 +1,6 @@
 {
   "name": "xanovi_lib",
-  "description": "Xanovi lib.",
+  "description": "XanoviPack est une librairie Node.js qui centralise les librairies de Literate. Elle ajoute également d'autres fonctionnalités peu utilisées mais présentes sur les différentes plateformes",
   "authors": "Mewax07",
   "version": "1.0.0",
   "main": "./dist/index.js",
@@ -18,7 +18,8 @@
   },
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --format esm,cjs --minify",
-    "parse": "bun run scripts/generator.ts"
+    "parse": "bun run scripts/generator.ts",
+    "readme": "bun run scripts/readme.ts"
   },
   "files": [
     "dist"

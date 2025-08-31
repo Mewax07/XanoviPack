@@ -2,7 +2,7 @@ import { RequestFN } from "~p0/core";
 import { decodeResource } from "~p0/decoders/resource";
 import { Assignment, SessionHandle, TabLocation } from "~p0/models";
 import { Resource } from "~p0/models/resource";
-import { decodeAssignment } from "./assignments";
+import { decodeAssignment } from "./assignment";
 import { apiProperties, homeworkFromIntervals, homeworkFromWeek } from "./private";
 
 const decoder = (session: SessionHandle, data: any): Array<Resource> => {

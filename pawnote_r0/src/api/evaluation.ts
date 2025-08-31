@@ -1,8 +1,8 @@
 import { RequestFN } from "~p0/core";
-import { decodeEvaluation } from "~p0/decoders/evaluations";
+import { decodeEvaluation } from "~p0/decoders/evaluation";
 import { encodePeriod } from "~p0/encoders";
 import { Period, SessionHandle, TabLocation } from "~p0/models";
-import { Evaluation } from "~p0/models/evaluations";
+import { Evaluation } from "~p0/models/evaluation";
 import { apiProperties } from "./private";
 
 export const evaluations = async (session: SessionHandle, period: Period): Promise<Array<Evaluation>> => {

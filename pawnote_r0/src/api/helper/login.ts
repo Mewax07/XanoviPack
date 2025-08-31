@@ -3,7 +3,7 @@ import { decodePronoteDate } from "~p0/decoders";
 import { decodeAuthenticationQr } from "~p0/decoders/auth";
 import { BadCredentialsError, InstanceParameters, SecurityError, SessionHandle } from "~p0/models";
 import { PasswordAuthenticationParams, TokenAuthenticationParams } from "~p0/models/auth";
-import { RefreshInformation } from "~p0/models/infos";
+import { RefreshInformation } from "~p0/models/info";
 import { AES, identify, instanceParameters, userParameters } from "../private";
 import { authenticate } from "../private/auth";
 import { sessionInformation } from "../session";
