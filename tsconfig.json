@@ -6,7 +6,8 @@
         "baseUrl": ".",
         "paths": {
             "~f0/*": ["./fetcher/*"],
-            "~p0/*": ["./pawnote_r0/src/*"]
+            "~p0/*": ["./pawnote_r0/src/*"],
+            "~l1/*": ["./desero/src/*"]
         },
         "strict": true,
         "noEmit": true,

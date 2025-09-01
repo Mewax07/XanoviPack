@@ -4,7 +4,12 @@ Xanovi Pack. Une librairie personnalisée basée sur les différentes libraires 
 
 ## Crédits
 
-Ce projet utilise du code de [Pawnote.js](https://github.com/LiterateInk/Pawnote.js) par LiterateInk. Tout le mérite revient à l'auteur original.
+Ce projet utilise du code provenant de [Literate](https://github.com/LiterateInk/), mais aussi de [Vexcited](https://github.com/Vexcited). Tout le mérite revient à l'auteur original (je précise mais si je ne me trompe pas c'est la même personne).
+
+J'utilise donc :
+
+- [Pawnote.js](https://github.com/LiterateInk/Pawnote.js) — Base principale pour le support de **Pronote**.  
+- [Desero](https://github.com/Vexcited/Desero) — Librairie de référence qui a inspiré et facilité les **modifications de Pawnote** ainsi que la conception des futures librairies (comme Pawdirecte).
 
 ---
 

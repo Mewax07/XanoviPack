@@ -15,21 +15,21 @@ async function main() {
 		deviceUUID: "my-device-uuid",
 	});
 
-	// const tab = session.userResource.tabs.get(Xanovi.pronote.TabLocation.Evaluations);
-	// if (!tab) throw new Error("Cannot retrieve periods for the grades tab, you maybe don't have access to it.");
-	// const selectedPeriod = tab.defaultPeriod!;
+	const tab = session.userResource.tabs.get(Xanovi.pronote.TabLocation.Evaluations);
+	if (!tab) throw new Error("Cannot retrieve periods for the grades tab, you maybe don't have access to it.");
+	const selectedPeriod = tab.defaultPeriod!;
 
-	// const homepage = await Xanovi.pronote.homepage(session, new Date());
-	// console.log(homepage);
+	const homepage = await Xanovi.pronote.homepage(session, new Date());
+	console.log(homepage);
 
-	// const evaluations = await Xanovi.pronote.evaluations(session, selectedPeriod);
-    // console.log(evaluations);
+	const evaluations = await Xanovi.pronote.evaluations(session, selectedPeriod);
+    console.log(evaluations);
 
-	const instance = await Xanovi.pronote.getStudentInstance(session);
-	console.log(instance);
+	// const instance = await Xanovi.pronote.getStudentInstance(session);
+	// console.log(instance);
 
-    const results = await Xanovi.pronote.result(session, instance[0]);
-    console.log(results);
+    // const results = await Xanovi.pronote.result(session, instance[0]);
+    // console.log(results);
 }
 
 main();
