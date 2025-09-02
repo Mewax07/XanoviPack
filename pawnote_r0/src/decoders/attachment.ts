@@ -1,4 +1,4 @@
-import { AES, aesKeys } from "~p0/api/private";
+import { AES, aesKeys } from "~p0/definitions/private";
 import { Attachment, AttachmentKind, SessionHandle } from "~p0/models";
 
 export const decodeAttachment = (attachment: any, session: SessionHandle, parameters = {}): Attachment => {

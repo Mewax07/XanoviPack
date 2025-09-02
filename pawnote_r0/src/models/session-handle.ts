@@ -1,5 +1,5 @@
 import type { Fetcher } from "~f0/index";
-import { Queue } from "~p0/api/private/queue";
+import { Queue } from "~p0/definitions/private/queue";
 import { AccountKind } from "./account";
 import { BaseInfo } from "./general";
 import { Holiday, Period, WeekFrequency } from "./time";

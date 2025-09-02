@@ -6,7 +6,7 @@ import { PasswordAuthenticationParams, TokenAuthenticationParams } from "~p0/mod
 import { RefreshInformation } from "~p0/models/info";
 import { AES, identify, instanceParameters, userParameters } from "../private";
 import { authenticate } from "../private/auth";
-import { sessionInformation } from "../session";
+import { sessionInformation } from "../../api/session";
 import { use } from "./use";
 
 const BASE_PARAMS = {

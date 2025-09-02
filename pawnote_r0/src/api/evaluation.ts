@@ -3,7 +3,7 @@ import { decodeEvaluation } from "~p0/decoders/evaluation";
 import { encodePeriod } from "~p0/encoders";
 import { Period, SessionHandle, TabLocation } from "~p0/models";
 import { Evaluation } from "~p0/models/evaluation";
-import { apiProperties } from "./private";
+import { apiProperties } from "../definitions/private";
 
 export const evaluations = async (session: SessionHandle, period: Period): Promise<Array<Evaluation>> => {
 	const properties = apiProperties(session);

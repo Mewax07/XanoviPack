@@ -3,7 +3,7 @@ import { decodeEducationalForum, decodeForumTopic } from "~p0/decoders/forum";
 import { SessionHandle, TabLocation } from "~p0/models";
 import { ForumAction, ForumActionNames } from "~p0/models/action";
 import { EducationalForum, ForumTopic } from "~p0/models/forum";
-import { apiProperties } from "./private";
+import { apiProperties } from "../definitions/private";
 
 export const educationalForum = async (session: SessionHandle): Promise<EducationalForum[]> => {
 	const properties = apiProperties(session);

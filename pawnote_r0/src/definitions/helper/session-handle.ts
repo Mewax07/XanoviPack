@@ -1,5 +1,5 @@
 import { defaultFetcher, Fetcher } from "~f0/index";
-import { Queue } from "~p0/api/private/queue";
+import { Queue } from "~p0/definitions/private/queue";
 import type { InstanceParameters, SessionHandle, SessionInformation, UserParameters, UserResource } from "~p0/models";
 
 /**

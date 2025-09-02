@@ -1,5 +1,5 @@
 import forge from "node-forge";
-import { isVersionGte2025_1_3 } from "~p0/api/private";
+import { isVersionGte2025_1_3 } from "~p0/definitions/private";
 import { SessionAccessKind, SessionInformation } from "~p0/models";
 
 const RSA_MODULO_1024 =

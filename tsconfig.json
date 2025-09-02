@@ -1,21 +1,23 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "moduleResolution": "bundler",
-        "baseUrl": ".",
-        "paths": {
-            "~f0/*": ["./fetcher/*"],
-            "~p0/*": ["./pawnote_r0/src/*"],
-            "~l1/*": ["./desero/src/*"]
-        },
-        "strict": true,
-        "noEmit": true,
-        "skipLibCheck": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
-    },
-    "include": ["pawnote_r0/src/**/*", "src/**/*"],
-    "exclude": ["node_modules", "dist"]
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"baseUrl": ".",
+		"paths": {
+			"~f0/*": ["./fetcher/*"],
+			"~p0/*": ["./pawnote_r0/src/*"],
+			"~d0/*": ["./desero/src/*"]
+		},
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["pawnote_r0/src/**/*", "src/**/*", "desero/src/**/*", "schwi/src/**/*"],
+	"exclude": ["node_modules", "dist", "ignored"]
 }

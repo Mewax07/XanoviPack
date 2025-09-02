@@ -1,8 +1,8 @@
 import forge from "node-forge";
 import pako from "pako";
-import { AES } from "~p0/api/private/aes";
-import { apiProperties } from "~p0/api/private/api-properties";
-import { aesKeys } from "~p0/api/private/keys";
+import { AES } from "~p0/definitions/private/aes";
+import { apiProperties } from "~p0/definitions/private/api-properties";
+import { aesKeys } from "~p0/definitions/private/keys";
 import { SessionHandle } from "~p0/models";
 import {
 	AccessDeniedError,

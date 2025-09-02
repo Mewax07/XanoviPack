@@ -3,7 +3,7 @@ import { decodeAccount } from "~p0/decoders/account";
 import { SessionHandle } from "~p0/models";
 import { Account } from "~p0/models/account";
 import { TabLocation } from "~p0/models/tab";
-import { apiProperties } from "./private/api-properties";
+import { apiProperties } from "../definitions/private/api-properties";
 
 export const account = async (session: SessionHandle): Promise<Account> => {
 	const properties = apiProperties(session);

@@ -3,7 +3,7 @@ import { decodeHomepage } from "~p0/decoders/homepage";
 import { encodePronoteDate } from "~p0/encoders";
 import { SessionHandle, TabLocation } from "~p0/models";
 import { Homepage } from "~p0/models/homepage";
-import { apiProperties, translateToWeekNumber } from "./private";
+import { apiProperties, translateToWeekNumber } from "../definitions/private";
 
 export const homepage = async (session: SessionHandle, day = session.instance.nextBusinessDay): Promise<Homepage> => {
 	const properties = apiProperties(session);

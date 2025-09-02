@@ -3,7 +3,7 @@ import { decodeGradeBook, decodeGradesOverview, decodeGradesRaising } from "~p0/
 import { encodePeriod } from "~p0/encoders";
 import { Period, SessionHandle, TabLocation } from "~p0/models";
 import { GradeBook, GradesOverview, ReportCard } from "~p0/models/grade";
-import { apiProperties } from "./private";
+import { apiProperties } from "../definitions/private";
 
 export const gradesOverview = async (session: SessionHandle, period: Period): Promise<GradesOverview> => {
 	const properties = apiProperties(session);

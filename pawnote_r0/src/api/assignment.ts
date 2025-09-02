@@ -5,8 +5,8 @@ import { decodeAssignmentQCM } from "~p0/decoders/qcm";
 import { decodeSubject } from "~p0/decoders/subject";
 import { AssignmentReturnKind, SessionHandle, TabLocation } from "~p0/models";
 import { Assignment, EntityState } from "~p0/models/assignment";
-import { apiProperties } from "./private";
-import { homeworkFromIntervals, homeworkFromWeek } from "./private/homework";
+import { apiProperties } from "../definitions/private";
+import { homeworkFromIntervals, homeworkFromWeek } from "../definitions/private/homework";
 
 export const decodeAssignment = (assignment: any, session: SessionHandle): Assignment => {
 	return {

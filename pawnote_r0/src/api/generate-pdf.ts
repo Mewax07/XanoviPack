@@ -3,7 +3,7 @@ import { encodeGeneral_r0 } from "~p0/encoders/general";
 import { encodePeriod } from "~p0/encoders/time";
 import { Period, SessionHandle, TabLocation } from "~p0/models";
 import { Student } from "~p0/models/parent";
-import { apiProperties } from "./private";
+import { apiProperties } from "../definitions/private";
 
 export const generatePDF = async (session: SessionHandle, student: Student): Promise<string> => {
 	const properties = apiProperties(session);

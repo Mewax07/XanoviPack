@@ -2,7 +2,7 @@ import { RequestFN } from "~p0/core";
 import { decodeBrevetReport } from "~p0/decoders";
 import { encodeGeneral_r0 } from "~p0/encoders";
 import { BrevetReport, SessionHandle, Student, TabLocation } from "~p0/models";
-import { apiProperties } from "./private";
+import { apiProperties } from "../definitions/private";
 
 export const result = async (session: SessionHandle, student: Student): Promise<BrevetReport> => {
 	const properties = apiProperties(session);
