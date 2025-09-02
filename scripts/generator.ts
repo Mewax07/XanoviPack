@@ -52,5 +52,29 @@ async function processFolder(folder) {
 	}
 }
 
+async function parseCode(arrayFolder: string[]) {
+	arrayFolder.forEach(async (folder) => {
+		const items = fs.readdirSync(folder);
+		for (const item of items) {
+			const fullPath = path.join(folder, item);
+			const stats = fs.statSync(fullPath);
+
+			if (stats.isFile() && fullPath.endsWith(".ts")) {
+				const content = fs.readFileSync(fullPath, "utf-8");
+				const formatted = await prettier.format(content, {
+					...prettierConfig,
+					parser: "typescript"
+				});
+				fs.writeFileSync(fullPath, formatted);
+			}
+		}
+	});
+}
+
 await processFolder(srcFolder);
 console.log("🎉 Tous les fichiers formatés et tous les index.ts générés !");
+
+await parseCode([
+	path.join(__dirname, "../desero/src"),
+	path.join(__dirname, "../pawnote_r0/src"),
+]);
