@@ -5,11 +5,11 @@
 		"moduleResolution": "bundler",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"baseUrl": ".",
 		"paths": {
-			"~f0/*": ["./fetcher/*"],
 			"~p0/*": ["./pawnote_r0/src/*"],
-			"~d0/*": ["./desero/src/*"]
+			"~d0/*": ["./utils/desero/src/*"],
+			"~s0/*": ["./utils/schwi/src/*"],
+			"~_maq/*": ["./utils/maq/src/*"],
 		},
 		"strict": true,
 		"noEmit": true,
@@ -18,6 +18,6 @@
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true
 	},
-	"include": ["pawnote_r0/src/**/*", "src/**/*", "desero/src/**/*", "schwi/src/**/*"],
+	"include": ["pawnote_r0/src/**/*", "src/**/*", "utils/desero/src/**/*", "utils/schwi/src/**/*"],
 	"exclude": ["node_modules", "dist", "ignored"]
 }

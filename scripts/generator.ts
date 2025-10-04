@@ -6,7 +6,7 @@ const srcFolder = path.join(__dirname, "../pawnote_r0/src");
 const prettierConfig = (JSON.parse(fs.readFileSync(path.join(__dirname, "../.prettierrc"), "utf-8")) as Options) || {};
 console.log(prettierConfig);
 
-async function generateIndex(folder) {
+async function generateIndex(folder: string) {
 	const items = fs.readdirSync(folder);
 
 	let exports: string[] = [];
@@ -16,7 +16,6 @@ async function generateIndex(folder) {
 		const stats = fs.statSync(fullPath);
 
 		if (stats.isDirectory()) {
-			// On exporte le sous-dossier lui-même
 			exports.push(`export * from "./${item}";`);
 		} else if (stats.isFile() && item.endsWith(".ts") && item !== "index.ts" && !item.endsWith(".d.ts")) {
 			const relativePath = "./" + item.replace(/\.ts$/, "");
@@ -32,7 +31,7 @@ async function generateIndex(folder) {
 	}
 }
 
-async function processFolder(folder) {
+async function processFolder(folder: string) {
 	const items = fs.readdirSync(folder);
 	for (const item of items) {
 		const fullPath = path.join(folder, item);
@@ -71,10 +70,12 @@ async function parseCode(arrayFolder: string[]) {
 	});
 }
 
-await processFolder(srcFolder);
-console.log("🎉 Tous les fichiers formatés et tous les index.ts générés !");
+//await processFolder(srcFolder);
+//console.log("🎉 Tous les fichiers formatés et tous les index.ts générés !");
 
 await parseCode([
-	path.join(__dirname, "../desero/src"),
+	path.join(__dirname, "../utils/desero/src"),
+	path.join(__dirname, "../utils/schwi/src"),
+	path.join(__dirname, "../utils/maq/src"),
 	path.join(__dirname, "../pawnote_r0/src"),
 ]);
