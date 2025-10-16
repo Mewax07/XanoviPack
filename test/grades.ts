@@ -27,7 +27,7 @@ async function main() {
 	 * Pour les accountKind STUDENT sa fonctionne aussi sa retourne l'instance de l'élève
 	 * Pout les accountKind TEACHER sa fonctionne également, sa retourne l'instance du prof
 	 */
-	const instance = await Xanovi.pronote.getStudentInstance(session);
+	const instance = await Xanovi.pronote.getInstance(session);
 	console.log(instance);
 
 	const releverDeNotes = await Xanovi.pronote.gradesRaising(session, selectedPeriod, instance[0].id);

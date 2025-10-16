@@ -6,7 +6,7 @@ import { TypeHttpEnsembleCardinal } from "../http/TypeHttpEnsembleCardinal";
 import { EnsembleNombre, TypeHttpEnsembleNombre } from "../http/TypeHttpEnsembleNombre";
 import { Domaine, TypeHttpDomaine } from "../http/TypeHttpDomaine";
 import { TypeHttpNote } from "../http/TypeHttpNote";
-import { Version } from "~p0/models";
+import { Version } from "~p0_rw/models";
 import { Langue } from "../models/Langue";
 import { NiveauAcquisition } from "../models/NiveauAcquisition";
 import { Heure } from "../models/Heure";

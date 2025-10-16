@@ -1,5 +1,3 @@
-export type Student = Readonly<{
-	id: string;
-	name: string;
-	kind: number;
-}>;
+import { BaseInfo } from "./general";
+
+export type Instance = BaseInfo;

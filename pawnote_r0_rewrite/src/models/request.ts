@@ -1,8 +1,8 @@
 import { bytesToHex, utf8ToBytes } from "@noble/ciphers/utils.js";
-import { UA } from "~p0/core";
+import { UA } from "~p0_rw/core";
 import { HeaderKeys, HttpRequest, HttpRequestMethod, HttpResponse, send } from "~s0/index.bun";
 import { Session } from "./session";
-import { deflate } from "~p0/core/deflate";
+import { deflate } from "~p0_rw/core/deflate";
 
 export abstract class RequestFunction<Data, Signature = undefined> {
 	protected constructor(

@@ -1,7 +1,7 @@
-import { FonctionParametresResponse } from "~p0/api/function";
+import { FonctionParametresResponse } from "~p0_rw/api/function";
 
 export class Parameters {
-    constructor(res: FonctionParametresResponse) {
-        //
-    }
+	constructor(private readonly parameters: FonctionParametresResponse) {
+		//
+	}
 }

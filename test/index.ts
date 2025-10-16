@@ -25,7 +25,7 @@ async function main() {
 	const evaluations = await Xanovi.pronote.evaluations(session, selectedPeriod);
     console.log(evaluations);
 
-	// const instance = await Xanovi.pronote.getStudentInstance(session);
+	// const instance = await Xanovi.pronote.getInstance(session);
 	// console.log(instance);
 
     // const results = await Xanovi.pronote.result(session, instance[0]);

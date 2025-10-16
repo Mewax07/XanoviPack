@@ -1,9 +1,9 @@
-import { deserialize } from "utils/desero/src/deserialize";
-import { deserializeWith, rename, t, u } from "utils/desero/src/index";
-import { HeaderKeys } from "utils/schwi/src/headers";
-import { send } from "utils/schwi/src/index.bun";
-import { HttpRequest } from "utils/schwi/src/request";
-import { UA } from "~p0/core/user-agent";
+import { deserialize } from "~d0/deserialize";
+import { deserializeWith, rename, t, u } from "~d0/index";
+import { HeaderKeys } from "~s0/headers";
+import { send } from "~s0/index.bun";
+import { HttpRequest } from "~s0/request";
+import { UA } from "~p0_rw/core/user-agent";
 import { Version } from "./version";
 import { Webspace } from "./webspace";
 

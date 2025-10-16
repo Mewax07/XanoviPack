@@ -15,7 +15,7 @@ async function main() {
 		deviceUUID: "my-device-uuid",
 	});
 
-    const myKidsList = await Xanovi.pronote.getStudentInstance(session);
+    const myKidsList = await Xanovi.pronote.getInstance(session);
     console.log(myKidsList.get(1));
 }
 

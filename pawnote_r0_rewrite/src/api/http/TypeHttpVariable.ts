@@ -1,13 +1,3 @@
-import type { TypeHttpChaineBrute } from "./TypeHttpChaineBrute";
-import type { TypeHttpDateTime } from "./TypeHttpDateTime";
-import type { TypeHttpDomaine } from "./TypeHttpDomaine";
-import type { TypeHttpElement } from "./TypeHttpElement";
-import type { TypeHttpEnsemble } from "./TypeHttpEnsemble";
-import type { TypeHttpEnsembleCardinal } from "./TypeHttpEnsembleCardinal";
-import type { TypeHttpEnsembleNombre } from "./TypeHttpEnsembleNombre";
-import type { TypeHttpHtmlSafe } from "./TypeHttpHtmlSafe";
-import type { TypeHttpNote } from "./TypeHttpNote";
-
 export enum TypeHttpVariable {
 	TypeHttpCategorie = 0,
 	TypeHttpCardinal = 1,

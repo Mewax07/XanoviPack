@@ -2,10 +2,10 @@ import { RequestFN } from "~p0/core";
 import { encodeGeneral_r0 } from "~p0/encoders/general";
 import { encodePeriod } from "~p0/encoders/time";
 import { Period, SessionHandle, TabLocation } from "~p0/models";
-import { Student } from "~p0/models/parent";
+import { Instance } from "~p0/models/parent";
 import { apiProperties } from "../definitions/private";
 
-export const generatePDF = async (session: SessionHandle, student: Student): Promise<string> => {
+export const generatePDF = async (session: SessionHandle, student: Instance): Promise<string> => {
 	const properties = apiProperties(session);
 
 	const request = new RequestFN(session, "GenerationPDF", {

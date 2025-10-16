@@ -10,7 +10,7 @@ import {
 	SuspendedIpError,
 } from "./errors";
 import { Session } from "./session";
-import { inflate } from "~p0/core/inflate";
+import { inflate } from "~p0_rw/core/inflate";
 
 export interface ResponseFunctionWrapper<DataModel, SignatureModel = undefined> {
 	data: DataModel;

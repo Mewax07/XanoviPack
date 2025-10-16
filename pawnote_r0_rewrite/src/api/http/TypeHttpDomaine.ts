@@ -1,4 +1,4 @@
-import { clamp } from "~p0/core/clamp";
+import { clamp } from "~p0_rw/core/clamp";
 import { TypeHttpVariable } from "./TypeHttpVariable";
 
 enum ValeurSemaine {

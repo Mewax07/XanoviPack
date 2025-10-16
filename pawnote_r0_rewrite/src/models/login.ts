@@ -1,5 +1,5 @@
 import { deserialize } from "~d0/deserialize";
-import { UA } from "~p0/core/user-agent";
+import { UA } from "~p0_rw/core/user-agent";
 import { HeaderKeys } from "~s0/headers";
 import { send } from "~s0/index.bun";
 import { HttpRequest, HttpRequestRedirection } from "~s0/request";
