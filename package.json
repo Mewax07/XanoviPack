@@ -16,6 +16,11 @@
 			"default": "./dist/index.js"
 		}
 	},
+	"workspaces": [
+		"pawnote_r0",
+		"pawnote_r0_rewrite",
+		"utils"
+	],
 	"scripts": {
 		"build": "bun build src/index.ts --outdir dist --target bun --format esm,cjs --minify",
 		"parse": "bun run scripts/generator.ts",
@@ -24,17 +29,6 @@
 	"files": [
 		"dist"
 	],
-	"dependencies": {
-		"@noble/ciphers": "^2.0.1",
-		"@noble/hashes": "^2.0.1",
-		"@scure/base": "^2.0.0",
-		"@tauri-apps/plugin-http": "^2.5.2",
-		"cheerio": "^1.1.2",
-		"fast-xml-parser": "^5.2.5",
-		"fflate": "^0.8.2",
-		"micro-rsa-dsa-dh": "^0.2.3",
-		"undici": "^7.15.0"
-	},
 	"type": "module",
 	"private": true,
 	"devDependencies": {
@@ -45,5 +39,8 @@
 	},
 	"peerDependencies": {
 		"typescript": "^5.9.2"
+	},
+	"dependencies": {
+		"set-cookie-parser": "^2.7.1"
 	}
 }

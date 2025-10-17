@@ -1,0 +1,32 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "utils",
+    },
+    "desero": {
+      "name": "desero",
+      "version": "1.0.0",
+    },
+    "maq": {
+      "name": "maq",
+      "version": "1.0.0",
+    },
+    "schwi": {
+      "name": "schwi",
+      "version": "1.0.0",
+      "dependencies": {
+        "undici": "^7.16.0",
+      },
+    },
+  },
+  "packages": {
+    "desero": ["desero@workspace:desero"],
+
+    "maq": ["maq@workspace:maq"],
+
+    "schwi": ["schwi@workspace:schwi"],
+
+    "undici": ["undici@7.16.0", "", {}, "sha512-QEg3HPMll0o3t2ourKwOeUAZ159Kn9mx5pnzHRQO8+Wixmh88YdZRiIwat0iNzNNXn0yoEtXJqFpyW7eM8BV7g=="],
+  }
+}

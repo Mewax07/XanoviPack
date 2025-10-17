@@ -38,7 +38,8 @@ export function deserialize<T extends new (...args: any[]) => any>(Model: T, dat
 				} else if (schema.reference) {
 					throw new Error(`default value is not allowed on reference fields ("${field}")`);
 				}
-			} else if (!schema.optional) {
+			}
+			else if (!schema.optional) {
 				throw new Error(`required field "${field}" is undefined in provided data`);
 			} else {
 				value = null;
