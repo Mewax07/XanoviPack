@@ -18,6 +18,7 @@ export class RequestFN {
 		url: URL;
 	} {
 		this.session.information.order++;
+		console.log("order request", this.session.information.order);
 
 		const order = this.generateOrder();
 		const url = new URL(
@@ -75,6 +76,7 @@ export class RequestFN {
 		return this.session.queue.push(async () => {
 			const payload = this.process();
 			const properties = apiProperties(this.session);
+			console.log("prop", this.data);
 
 			if (this.session?.user && this.data?.Signature) {
 				if (this.session.information.accountKind === AccountKind.PARENT) {

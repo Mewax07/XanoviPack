@@ -33,5 +33,6 @@ export const identify = async (
 	});
 
 	const response = await request.send();
+	console.log(response.data[properties.data], session.information.accountKind);
 	return response.data[properties.data];
 };

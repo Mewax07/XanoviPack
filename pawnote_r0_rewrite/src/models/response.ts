@@ -1,5 +1,6 @@
 import { bytesToUtf8, hexToBytes } from "@noble/ciphers/utils.js";
 import { deserialize } from "~d0/index";
+import { inflate } from "~p0_rw/core/inflate";
 import { HttpResponse } from "~s0/response";
 import {
 	AccessDeniedError,
@@ -10,7 +11,6 @@ import {
 	SuspendedIpError,
 } from "./errors";
 import { Session } from "./session";
-import { inflate } from "~p0_rw/core/inflate";
 
 export interface ResponseFunctionWrapper<DataModel, SignatureModel = undefined> {
 	data: DataModel;
@@ -36,6 +36,8 @@ export class ResponseFunction<
 		>
 	> {
 		this.session.api.order++;
+		console.log("order response", this.session.api.order);
+
 		const content = await response.toString();
 
 		try {

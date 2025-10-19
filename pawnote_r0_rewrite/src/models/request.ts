@@ -1,8 +1,8 @@
 import { bytesToHex, utf8ToBytes } from "@noble/ciphers/utils.js";
 import { UA } from "~p0_rw/core";
+import { deflate } from "~p0_rw/core/deflate";
 import { HeaderKeys, HttpRequest, HttpRequestMethod, HttpResponse, send } from "~s0/index.bun";
 import { Session } from "./session";
-import { deflate } from "~p0_rw/core/deflate";
 
 export abstract class RequestFunction<Data, Signature = undefined> {
 	protected constructor(
@@ -34,6 +34,7 @@ export abstract class RequestFunction<Data, Signature = undefined> {
 	protected async execute(data?: Data, signature?: Signature): Promise<HttpResponse> {
 		return this.session.api.queue.run(async () => {
 			this.session.api.order++;
+			console.log("order request", this.session.api.order);
 
 			const order = bytesToHex(this.session.aes.encrypt(this.session.api.order));
 			const url = `${this.session.url}/appelfonction/${this.session.homepage.webspace}/${this.session.homepage.id}/${order}`;

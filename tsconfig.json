@@ -12,7 +12,8 @@
 			"~d0/*": ["./utils/desero/src/*"],
 			"~s0/*": ["./utils/schwi/src/*"],
 			"~_maq/*": ["./utils/maq/src/*"],
-			"~f0/*": ["./fetcher/*"]
+			"~f0/*": ["./fetcher/*"],
+			"~m0/*": ["./mbown/*"]
 		},
 		"strict": true,
 		"noEmit": true,
@@ -27,7 +28,8 @@
 		"src/**/*",
 		"utils/desero/src/**/*",
 		"utils/schwi/src/**/*",
-		"fetcher/*"
+		"fetcher/*",
+		"mbown/**/*"
 	],
 	"exclude": ["node_modules", "dist", "ignored"]
 }

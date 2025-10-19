@@ -3,7 +3,7 @@ import { UA } from "~p0_rw/core/user-agent";
 import { HeaderKeys } from "~s0/headers";
 import { send } from "~s0/index.bun";
 import { HttpRequest, HttpRequestRedirection } from "~s0/request";
-import { FonctionParametres } from "../api/function";
+import { FonctionIdentify, FonctionParametres } from "../api/function";
 import { BusyPageError, PageUnavailableError, SuspendedIpError } from "./errors";
 import { Instance } from "./instance";
 import { Parameters } from "./params";
@@ -37,7 +37,22 @@ export class Login {
 		this.session = new Session(instance, homepage, this.instance.base);
 		const parameters = new Parameters(await new FonctionParametres(this.session).send(navigatorIdentifier));
 
-		console.log(parameters);
+		// console.log(parameters);
+
+		const identify = new FonctionIdentify(this.session).send({
+			username,
+			deviceUUID,
+
+			requestFirstMobileAuthentication: true,
+			reuseMobileAuthentication: false,
+			requestFromQRCode: false,
+			useCAS: false,
+		});
+
+		console.log(identify);
+
+		// if (identity.modeCompLog === 1) username = username.toLowerCase();
+		// if (identity.modeCompMdp === 1) password = password.toLowerCase();
 	}
 
 	private async getWebspaceHomepageSession(

@@ -21,6 +21,7 @@ export class ResponseFN {
 		const properties = apiProperties(this.session);
 
 		this.session.information.order++;
+		console.log("order response", this.session.information.order);
 		const content = data;
 
 		try {

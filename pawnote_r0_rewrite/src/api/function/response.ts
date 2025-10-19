@@ -1,20 +1,20 @@
 import { deserializeWith, rename, t } from "~d0/index";
+import { Version } from "~p0_rw/models";
 import { TypeHttpChaineBrute } from "../http/TypeHttpChaineBrute";
-import { TypeHttpElement } from "../http/TypeHttpElement";
 import { TypeHttpDateTime } from "../http/TypeHttpDateTime";
+import { Domaine, TypeHttpDomaine } from "../http/TypeHttpDomaine";
+import { TypeHttpElement } from "../http/TypeHttpElement";
 import { TypeHttpEnsembleCardinal } from "../http/TypeHttpEnsembleCardinal";
 import { EnsembleNombre, TypeHttpEnsembleNombre } from "../http/TypeHttpEnsembleNombre";
-import { Domaine, TypeHttpDomaine } from "../http/TypeHttpDomaine";
 import { TypeHttpNote } from "../http/TypeHttpNote";
-import { Version } from "~p0_rw/models";
-import { Langue } from "../models/Langue";
-import { NiveauAcquisition } from "../models/NiveauAcquisition";
-import { Heure } from "../models/Heure";
-import { Recreation } from "../models/Recreation";
-import { Periode } from "../models/Periode";
 import { Collectivite } from "../models/Collectivite";
-import { Police } from "../models/Police";
+import { Heure } from "../models/Heure";
+import { Langue } from "../models/Langue";
 import { MentionsPagesPubliques } from "../models/MentionsPagesPubliques";
+import { NiveauAcquisition } from "../models/NiveauAcquisition";
+import { Periode } from "../models/Periode";
+import { Police } from "../models/Police";
+import { Recreation } from "../models/Recreation";
 
 class General {
 	@rename("urlSiteIndexEducation")
@@ -403,4 +403,17 @@ export class FonctionParametresModel {
 export class FonctionParametresSignature {
 	@rename("ModeExclusif")
 	public exclusive = t.boolean();
+}
+
+export class FonctionIdentifyModel {
+	@rename("alea")
+	public random = t.string();
+
+	@rename("modeCompMdp")
+	public modePassword = t.number();
+
+	@rename("modeCompLog")
+	public modeLogin = t.number();
+
+	public challenge = t.string();
 }
